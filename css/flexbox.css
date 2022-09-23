@@ -1,0 +1,30 @@
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+}
+
+.flexitem {
+  width: 200px;
+  height: 400px;
+  background-color: burlywood;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.item1 {
+  flex-shrink: 6;
+}
+
+.item2 {
+  background-color: cadetblue;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.item3 {
+  flex-grow: 2;
+  flex-shrink: 6;
+}
