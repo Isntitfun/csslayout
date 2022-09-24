@@ -115,3 +115,39 @@
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   grid-template-rows: repeat(1, 100px);
 }
+
+.grid {
+  display: grid;
+  height: 50vh;
+  gap: 3px;
+  justify-content: start;
+  align-content: center;
+  grid-template-columns: repeat(6, minmax(min-content, max-content));
+  grid-template-rows: repeat(1, minmax(min-content, max-content));
+}
+
+.gridbox {
+  background-color: darkorchid;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 4px;
+  padding: 5px;
+}
+
+.practice-grid {
+  display: grid;
+  height: 100vh;
+  gap: 3px;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: repeat(5, 100px);
+  grid-template-rows: repeat(5, 100px);
+}
+
+.water {
+  background-color: midnightblue;
+  grid-column: 1 / span 3;
+}
