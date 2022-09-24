@@ -1,17 +1,99 @@
-.flex-container {
+.grid-container1 {
   display: grid;
-  grid-template-columns: 200px 50px 130px;
-  grid-template-rows: 130px 200px 50px;
-  column-gap: 10px;
-  row-gap: 10px;
+  height: 100vh;
+  column-gap: 3px;
+  row-gap: 3px;
+  justify-items: stretch;
+  align-items: stretch;
+  justify-content: center;
+  align-content: center;
+  grid-template:
+    "hedr hedr hedr hedr hedr" 100px
+    "navg cnt1 cnt1 cnt2 cnt2" 100px
+    "navg cnt1 cnt1 cnt2 cnt2" 100px
+    "navg cnt1 cnt1 cnt2 cnt2" 100px
+    "foot foot foot foot foot" 100px
+    / 100px 100px 100px 100px 100px;
 }
 
 .flexitem {
-  background-color: tan;
-  color: white;
-  font-size: 20px;
+  background-color: cadetblue;
   border-radius: 5px;
+  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.flexitem:nth-child(even) {
+  background-color: rgb(243, 143, 107);
+}
+
+.header {
+  grid-area: hedr;
+  background-color: black;
+  color: rgb(0, 0, 0, 0);
+  align-self: flex-start;
+}
+
+.footer {
+  grid-area: foot;
+  background-color: rgb(39, 39, 39);
+  color: rgb(39, 39, 39, 0);
+  align-self: flex-end;
+}
+
+.nav {
+  grid-area: navg;
+  background-color: silver;
+  color: rgb(192, 192, 192, 0);
+}
+
+.c1 {
+  grid-area: cnt1;
+  background-color: darkorange;
+  color: rgb(255, 140, 0, 0);
+}
+
+.c2 {
+  grid-area: cnt2;
+  background-color: rgb(255, 226, 60);
+  color: rgb(255, 226, 60);
+}
+
+.header,
+.footer,
+.nav,
+.c1,
+.c2 {
+  opacity: 0.7;
+  font-size: 20px;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+}
+
+.header:hover,
+.footer:hover,
+.nav:hover,
+.c1:hover,
+.c2:hover {
+  transition: all 0.2s ease-in;
+  opacity: 1;
+  color: white;
+}
+
+.grid-container2 {
+  display: grid;
+  height: 100vh;
+  gap: 3px;
+  grid-template-columns: repeat(5, 100px);
+  grid-template-rows: repeat(1, 100px);
+  grid-auto-flow: column;
+  grid-auto-columns: 100px;
+  /* grid-auto-rows: 100px; */
+  justify-content: start;
+  align-content: center;
 }
